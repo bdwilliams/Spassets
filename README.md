@@ -1,0 +1,4 @@
+Spassets
+========
+
+SlimPHP Asset Manager
