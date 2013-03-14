@@ -2,8 +2,8 @@ Spassets - SlimPHP Asset Manager
 ================================
 
 TODO:
-Twig Extension
-Support for Less
+* Twig Extension
+* Support for Less
 
 Example:
 --------
