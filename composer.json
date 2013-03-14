@@ -1,0 +1,21 @@
+{
+	"name": "bdwilliams/Spassets",
+    "type": "slimphp-assets",
+    "description": "SlimPHP Assets Manager",
+    "keywords": ["asset", "css", "javascript", "minify", "twig", "slim"],
+    "homepage": "https://github.com/bdwilliams/Spassets",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Williams",
+            "email": "brian@mxapps.com",
+            "homepage": "http://www.mxapps.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": { "bdwilliams\Spassets": "libs/" }
+    }
+}
