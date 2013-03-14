@@ -1,5 +1,5 @@
 {
-    "name": "bdwilliams/Spassets",
+    "name": "bdwilliams/spassets",
     "type": "library",
     "description": "SlimPHP Assets Manager",
     "keywords": ["asset", "css", "javascript", "minify", "twig", "slim"],
