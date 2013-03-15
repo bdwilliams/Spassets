@@ -64,10 +64,10 @@ class Spassets
 		switch ($type)
 		{
 			case 'css':
-				echo "<link href='/".$this->cachePath."/".$file."' rel='stylesheet' type='text/css' />";
+				return "<link href='/".$this->cachePath."/".$file."' rel='stylesheet' type='text/css' />";
 				break;
 			case 'js':
-				echo "<script src='/".$this->cachePath."/".$file."' type='text/javascript'></script>";
+				return "<script src='/".$this->cachePath."/".$file."' type='text/javascript'></script>";
 				break;
 		}
 	}
