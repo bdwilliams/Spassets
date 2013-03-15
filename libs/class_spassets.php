@@ -22,7 +22,7 @@ class Spassets
 				$content = "";
 				foreach ($assets as $asset)
 				{
-					$content .= $this->getContents($asset);
+					$content .= $this->getContents($type, $asset);
 				}
 				
 				file_put_contents($this->cachePath."/".$file, $content);
@@ -36,12 +36,18 @@ class Spassets
 		}
 	}
 	
-	public function getContents($asset)
+	public function getContents($type, $asset)
 	{
 		if (file_exists($this->assetPath.$asset))
 		{
-			$contents = ($this->minify) ? $this->minify(file_get_contents($this->assetPath.$asset)) : file_get_contents($this->assetPath.$asset);
-			return $contents;
+			if ($type == 'css')
+			{
+				return ($this->minify) ? $this->minify(file_get_contents($this->assetPath.$asset)) : file_get_contents($this->assetPath.$asset);
+			}
+			else
+			{
+				return file_get_contents($this->assetPath.$asset);	
+			}			
 		}
 	}
 
