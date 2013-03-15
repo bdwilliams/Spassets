@@ -15,7 +15,7 @@ index.php:
 	$assets = New \Spassets\Spassets();
 	$assets->minify = true;
 	
-	$app->get('/', function () use ($app) {
+	$app->get('/', function () use ($app, $assets) {
 		$css = $assets->printAssets('css', array('/css/bootstrap/bootstrap.min.css', '/css/bootstrap/bootstrap-responsive.min.css', '/css/custom.css'));
 		$js = $assets->printAssets('js', array('/js/bootstrap/bootstrap.js', '/js/custom.js'));
 	    $app->render('index.html.twig', array('session' => $_SESSION, 'css' => $css, 'js' => $js));
