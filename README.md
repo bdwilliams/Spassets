@@ -27,11 +27,11 @@ index.html.twig:
 	<html>
 	  <head>
 	    <title>Your Page</title>
-	    {{ css }}
+	    {{ css|raw }}
 	  </head>
 	  <body>
 	    <h1>Hello, world!</h1>
-	    {{ js }}
+	    {{ js|raw }}
 	  </body>
 	</html>
 
