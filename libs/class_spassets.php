@@ -63,6 +63,32 @@ class Spassets
 		return $content;
 	}
 
+	public function define($array)
+	{
+		$assetArray = array();
+		
+		if (is_array($array) && count($array) > 0)
+		{
+			foreach ($array as $type => $assets)
+			{
+				foreach ($assets as $name => $asset)
+				{
+					switch ($type)
+					{
+						case 'css':
+							$assetArray[$type][$name] = "<link href='/".$this->cachePath."/".$this->buildAssets($type, $asset)."' rel='stylesheet' type='text/css' />";
+							break;
+						case 'js':
+							$assetArray[$type][$name] = "<script src='/".$this->cachePath."/".$this->buildAssets($type, $asset)."' type='text/javascript'></script>";
+							break;
+					}
+				}
+			}
+			
+			return $assetArray;
+		}
+	}
+	
 	public function printAssets($type, $assets)
 	{
 		$file = $this->buildAssets($type, $assets);
